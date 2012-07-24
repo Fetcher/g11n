@@ -2,11 +2,11 @@
 require File.expand_path('../lib/g11n/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Fernando Via"]
-  gem.email         = ["fernando.via@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.authors       = ["Xavier Via"]
+  gem.email         = ["xavier.via.canel@gmail.com"]
+  gem.description   = %q{Internationalization library focused in simplicity of implementation}
+  gem.summary       = %q{Internationalization library focused in simplicity of implementation}
+  gem.homepage      = "http://github.com/Fetcher/g11n"
 
   gem.add_dependency "symboltable"
 
