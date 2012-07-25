@@ -1,4 +1,5 @@
 # G11n is Globalization
+[![Build Status](https://secure.travis-ci.org/Fetcher/g11n.png)](http://travis-ci.org/Fetcher/fetcher)
 
 Globalization (g11n) is a Ruby Gem for easy language file handling aimed at internationalized projects.
 
