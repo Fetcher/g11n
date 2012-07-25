@@ -1,6 +1,7 @@
 require "g11n"
 require "fast/fast"
 require "pry"
+require "yaml"
 
 def low_level_deconfigurate!
   Fast.dir.delete! :translations
