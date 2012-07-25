@@ -46,10 +46,15 @@ And then execute:
 
 Configuration is straight forward. You are using another directory for your language files? Just `G11n.path "your/path"`. You want to change the locale? `G11n.locale :yours`.
 
-    # ./translations/ru.yml
+For example, a translations file in a non-standard folder:
+
+    # ./i18ns/ru.yml
     home:
       land: Российская Федерация
-    
+
+And a script in the base folder:
+
+    # ./script.rb
     require "g11n"
     
     G11n.path "i18ns"
