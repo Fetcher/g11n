@@ -32,9 +32,9 @@ module G11n
     def dictionary_for the_locale
       return @dictionaries[the_locale] if @dictionaries.has_key? the_locale # In case is already loaded
       if File.exists? "#{@translations_path}#{the_locale}.yaml" 
-        @dictionaries[the_locale] = Dictionary.new YAML.load_file "#{@translations_path}#{the_locale}.yaml"
+        @dictionaries[the_locale] = SymbolMatrix.new "#{@translations_path}#{the_locale}.yaml"
       elsif File.exists? "#{@translations_path}#{the_locale}.yml"
-        @dictionaries[the_locale] = Dictionary.new YAML.load_file "#{@translations_path}#{the_locale}.yml"
+        @dictionaries[the_locale] = SymbolMatrix.new "#{@translations_path}#{the_locale}.yml"
       else
         raise NoTranslationAvailable, "There is no translation file available for the '#{the_locale}' locale, check the tranlations source directory configuration"
       end

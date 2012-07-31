@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Internationalization library focused in simplicity of implementation}
   gem.homepage      = "http://github.com/Fetcher/g11n"
 
-  gem.add_dependency "symboltable"
+  gem.add_dependency "symbolmatrix"
 
   gem.add_development_dependency "rspec"
   gem.add_development_dependency "cucumber"

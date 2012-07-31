@@ -62,9 +62,9 @@ describe G11n::Translator do
         Fast.file.write "translations/en.yaml", { :hello => "Text", :nested => { :is => "good" } }.to_yaml
       end
       
-      it "should return the G11n::Dictionary object with the information from the YAML file" do
+      it "should return the SymbolMatrix object with the information from the YAML file" do
         dictionary = G11n::Translator.instance.dictionary_for :en
-        dictionary.should be_a G11n::Dictionary
+        dictionary.should be_a SymbolMatrix
         dictionary.should have_key :hello
       end
     end
