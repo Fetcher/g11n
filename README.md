@@ -1,5 +1,5 @@
 # G11n is Globalization
-[![Build Status](https://secure.travis-ci.org/Fetcher/g11n.png)](http://travis-ci.org/Fetcher/g11n)
+[![Build Status](https://secure.travis-ci.org/Fetcher/g11n.png)](http://travis-ci.org/Fetcher/g11n) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/Fetcher/g11n)
 
 Globalization (g11n) is a Ruby Gem for easy language file handling aimed at internationalized projects.
 
@@ -11,27 +11,31 @@ G11n assumes you will have a series of language files written in YAML in an acce
 
 The default path for that folder is `translations/`. So, for example, if you have a file named `translations/it.yaml` that reads as...
 
-    # ./translations/it.yaml
-    home:
-      title: La pasta di la nonna
-      menu:
-        preparation: Comme farla
-        eating: Comme si mangia
-        wine: Con che si accompagna
+```yaml
+# ./translations/it.yaml
+home:
+  title: La pasta della nonna
+  menu:
+    preparation: Comme farla
+    eating: Comme si mangia
+    wine: Con che si accompagna
+```
 
 ... you can, in your project, insert the following code and get the internationalized strings:
 
-    # .script.rb
-    require "g11n"
-    
-    G11n.locale :it                             # Configures G11n to use italian. Default is "en"
-    
-    G11n.t.home.title                           # => "La pasta di la nonna"
-    G11n.t.home.menu.wine                       # => "Con che si accompagna"
+```ruby
+# .script.rb
+require "g11n"
+
+G11n.locale :it                             # Configures G11n to use italian. Default is "en"
+
+G11n.t.home.title                           # => "La pasta della nonna"
+G11n.t.home.menu.wine                       # => "Con che si accompagna"
+```
     
 ## Installation
 
-    $ gem install g11n
+    gem install g11n
 
 ### Or when using Bundler
 
@@ -41,7 +45,7 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    bundle install
 
 ## Configuring
 
@@ -49,19 +53,23 @@ Configuration is straight forward. You are using another directory for your lang
 
 For example, a translations file in a non-standard folder:
 
-    # ./i18ns/ru.yml
-    home:
-      land: Российская Федерация
+```yaml
+# ./i18ns/ru.yml
+home:
+  land: Российская Федерация
+```
 
 And a script in the base folder:
 
-    # ./script.rb
-    require "g11n"
-    
-    G11n.path "i18ns"
-    G11n.locale :ru
-    
-    G11n.t.home.land                           # => "Российская Федерация"
+```ruby
+# ./script.rb
+require "g11n"
+
+G11n.path "i18ns"
+G11n.locale :ru
+
+G11n.t.home.land                           # => "Российская Федерация"
+```
 
 Also, the `G11n::DSL` module can be included in any object of class you want to use the `#t` method more confortably.
 
