@@ -43,6 +43,12 @@ describe G11n::Translator do
       end
     end
   end
+
+  describe "#locale" do
+    it "should return the locale" do
+      G11n::Translator.instance.locale.should == :en
+    end
+  end
   
   describe "#translations_path=" do
     it "sets the translations path" do

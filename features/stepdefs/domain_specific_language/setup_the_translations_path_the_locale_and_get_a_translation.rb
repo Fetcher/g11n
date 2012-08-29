@@ -26,3 +26,13 @@ And /^I run "(.*?)" on the :(\w+) method$/ do |argument, message|
   o.extend G11n::DSL
   @the_translation = eval "o.#{message}.#{argument}"  
 end
+
+When /^I send :(\w+) to the configuration DSL$/ do |message|
+  o = Object.new
+  o.extend G11n::Configuration
+  @result = o.send message.to_sym
+end
+
+Then /^I should see :(\w+)$/ do |locale|
+  @result = locale.to_sym
+end

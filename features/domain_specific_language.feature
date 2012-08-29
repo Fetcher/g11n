@@ -14,3 +14,5 @@ Scenario: Setup the translations path, the locale and get a translation
   And I send :locale :uy to the configuration DSL
   And I run "bebida.nacional" on the :t method
   Then I should see "Mate"
+  When I send :locale to the configuration DSL
+  Then I should see :uy

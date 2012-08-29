@@ -15,6 +15,11 @@ module G11n
       @locale = the_locale
     end
     
+    # @return [Symbol] the current locale
+    def locale
+      @locale
+    end
+
     # Sets the path where translations will be looked for
     def translations_path= the_path
       @translations_path = the_path

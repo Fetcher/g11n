@@ -6,9 +6,10 @@ module G11n
       Translator.instance.translations_path = the_path + "/"
     end
     
-    # Sets the locale
-    def locale the_locale
-      Translator.instance.locale = the_locale
+    # Sets or get the locale
+    def locale the_locale = nil
+      Translator.instance.locale = the_locale if the_locale
+      Translator.instance.locale
     end
   end
 end
