@@ -28,6 +28,7 @@ home:
 require "g11n"
 
 G11n.locale :it                             # Configures G11n to use italian. Default is "en"
+G11n.locale                                 # => :it
 
 G11n.t.home.title                           # => "La pasta della nonna"
 G11n.t.home.menu.wine                       # => "Con che si accompagna"
