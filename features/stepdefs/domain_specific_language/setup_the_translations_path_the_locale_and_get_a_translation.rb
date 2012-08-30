@@ -24,7 +24,7 @@ end
 And /^I run "(.*?)" on the :(\w+) method$/ do |argument, message|
   o = Object.new
   o.extend G11n::DSL
-  @the_translation = eval "o.#{message}.#{argument}"  
+  @result = eval "o.#{message}.#{argument}"  
 end
 
 When /^I send :(\w+) to the configuration DSL$/ do |message|

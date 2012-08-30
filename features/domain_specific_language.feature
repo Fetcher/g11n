@@ -16,3 +16,5 @@ Scenario: Setup the translations path, the locale and get a translation
   Then I should see "Mate"
   When I send :locale to the configuration DSL
   Then I should see :uy
+  When I send :path to the configuration DSL
+  Then I should see "i18n/"  

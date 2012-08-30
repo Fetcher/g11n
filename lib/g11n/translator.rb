@@ -24,6 +24,11 @@ module G11n
     def translations_path= the_path
       @translations_path = the_path
     end
+
+    # @return [String] the current path to translations
+    def translations_path
+      @translations_path
+    end
    
     # Forwards the method call to the right "dictionary" (a SymbolTable object)
     # http://mjijackson.com/2010/04/config-revisited

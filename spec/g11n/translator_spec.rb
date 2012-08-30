@@ -62,6 +62,12 @@ describe G11n::Translator do
     end
   end 
   
+  describe "#translations_path" do
+    it "should return the translations path" do 
+      G11n::Translator.instance.translations_path.should == "translations/"
+    end
+  end
+
   describe "#dictionary_for" do
     context "there is in fact a dictionary for the locale" do
       before do 

@@ -2,8 +2,9 @@ module G11n
   # DSL for the configuration of G11n
   module Configuration    
     # Sets the translations path
-    def path the_path
-      Translator.instance.translations_path = the_path + "/"
+    def path the_path = nil
+      Translator.instance.translations_path = the_path + "/" if the_path
+      Translator.instance.translations_path
     end
     
     # Sets or get the locale

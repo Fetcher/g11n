@@ -16,9 +16,9 @@ When /^I have the locale setted as "(.*?)"$/ do |locale|
 end
 
 And /^I write "(.*?)" in the translation engine$/ do |identifier|
-  @the_translation = eval "G11n::Translator.instance.translate.#{identifier}"
+  @result = eval "G11n::Translator.instance.translate.#{identifier}"
 end
 
 Then /^I should see "(.*?)"$/ do |text|
-  @the_translation.should == text
+  @result.should == text
 end
