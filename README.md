@@ -75,7 +75,7 @@ G11n.t.home.land                           # => "Российская Федер
 Also, the `G11n::DSL` module can be included in any object of class you want to use the `#t` method more confortably.
 
 ## Use it in Sinatra
-The G11n DSL (the `#t` and `#translate` methods) are as a module unsurprisingly called `G11n::DSL`. You can of course include in into your helpers as easy as:
+The G11n DSL (the `#t` and `#translate` methods) are available as a module unimaginatively called `G11n::DSL`. You can of course include it into your helpers as easy as:
 
 ```ruby
 # .app.rb
@@ -88,7 +88,7 @@ G11n.locale :es
 
 get '/' do
   t.welcome                             # => "¡Bienvenido, amigo!" 
-                                        # as described in the es.yaml
+                                        # as described in es.yaml
 end
 ```
 
@@ -97,7 +97,7 @@ end
 welcome: ¡Bienvenido, amigo!
 ```
 
-It works in modular style also.
+It works in modular style too.
 
 ## Testing
 
