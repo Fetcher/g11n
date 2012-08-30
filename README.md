@@ -74,13 +74,34 @@ G11n.t.home.land                           # => "Российская Федер
 
 Also, the `G11n::DSL` module can be included in any object of class you want to use the `#t` method more confortably.
 
-> **Note**: g11n is planned to soon be made a Sinatra extension
+## Use it in Sinatra
+The G11n DSL (the `#t` and `#translate` methods) are as a module unsurprisingly called `G11n::DSL`. You can of course include in into your helpers as easy as:
+
+```ruby
+# .app.rb
+require 'sinatra'
+require 'g11n'
+
+helpers G11n::DSL
+
+G11n.locale :es
+
+get '/' do
+  t.welcome                             # => "¡Bienvenido, amigo!" 
+                                        # as described in the es.yaml
+end
+```
+
+```yaml
+# .translations/es.yaml
+welcome: ¡Bienvenido, amigo!
+```
+
+It works in modular style also.
 
 ## Testing
 
 Cucumber features and RSpec specs are provided to check functionality.
-
-An exception is the G11n::Dictionary class, which is just a subclass of SymbolTable that recursively converts all hashes passed as argument to the initializer into Dictionaries. This is really handy.
 
 ## License
 
