@@ -105,6 +105,7 @@ It works in modular style too.
 - Add support for named string interpolation using the same `%` operator. Add an alias to the `%` interpolation operation, some method name easier to remember (even if its longer)
 - Add support for string arguments to get further Rails I18n compatibility
 - Add flag to activate Rails I18n compatibility mode
+- Add support for locale as argument of Translator#translate
 
 ### Date, number, ... helpers
 Rails provide a nice functionality for number and date helpers that, since relays on words, ends up needing internationalizations. G11n is compatible with Rails I18n approach, that uses YAML, but not entirely since G11n uses different files for each locale. 
