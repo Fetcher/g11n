@@ -99,6 +99,22 @@ welcome: ¡Bienvenido, amigo!
 
 It works in modular style too.
 
+## Future
+- Document usage of Ruby's `String` interpolation in G11n
+- Add support for named string interpolation using the same `%` operator. Add an alias to the `%` interpolation operation, some method name easier to remember (even if its longer)
+- Add support for string arguments to get further Rails I18n compatibility
+- Add flag to activate Rails I18n compatibility mode
+
+### Date, number, ... helpers
+Rails provide a nice functionality for number and date helpers that, since relays on words, ends up needing internationalizations. G11n is compatible with Rails I18n approach, that uses YAML, but not entirely since G11n uses different files for each locale. 
+
+In the case that a helper library that doesn't depend on Rails with those methods its found in the wild, G11n should be someway be made compatible.
+
+### Package Managers! Dictionaries!
+Related to the helpers above... well, is known that many words need to be translated only once. A package manager for G11n will do the trick of getting a lot of translations easier.
+
+Of course, since one cannot know the handler for certain word in every case, G11n should also implement a Chain of Responsibility to discover standard handlers if none is defined.
+
 ## Testing
 
 Cucumber features and RSpec specs are provided to check functionality.
