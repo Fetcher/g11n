@@ -100,6 +100,7 @@ welcome: ¡Bienvenido, amigo!
 It works in modular style too.
 
 ## Future
+- Change the Configuration DSL so #translations_path or #translations or something like that is used to set the path, so that the full DSL can be included as helper in Sinatra. Deprecate Configuration#path
 - Document usage of Ruby's `String` interpolation in G11n
 - Add support for named string interpolation using the same `%` operator. Add an alias to the `%` interpolation operation, some method name easier to remember (even if its longer)
 - Add support for string arguments to get further Rails I18n compatibility
